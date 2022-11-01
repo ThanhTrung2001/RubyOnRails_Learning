@@ -15,8 +15,16 @@
     <%= form.label :username %>
     <%= form.text_field :username %>
   </div>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email , place_holder: "ENter your email"%>
+  </div>
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit (@user.new_record? ? "Sign up" : "Update") %>
   </div>
 <% end %>
